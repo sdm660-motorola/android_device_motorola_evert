@@ -14,7 +14,7 @@ include device/motorola/msm8998-common/BoardConfigCommon.mk
 DEVICE_PATH := device/motorola/evert
 
 # Assertions
-TARGET_BOARD_INFO_FILE := device/motorola/evert/board-info.txt
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := evert
 
 # Display
