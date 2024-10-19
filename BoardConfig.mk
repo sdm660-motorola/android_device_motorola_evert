@@ -14,14 +14,14 @@ include device/motorola/msm8998-common/BoardConfigCommon.mk
 DEVICE_PATH := device/motorola/evert
 
 # Assertions
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := evert
 
 # Display
 TARGET_SCREEN_DENSITY := 420
 
 # HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/evert_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/evert_manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
@@ -36,11 +36,11 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 956301312 # 912 MB
 TARGET_HAS_NO_WLAN_STATS := true
 
 # Properties
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/props/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# inherit from the proprietary version
+# Inherit from the proprietary version
 include vendor/motorola/evert/BoardConfigVendor.mk
