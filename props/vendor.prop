@@ -24,6 +24,9 @@ bluetooth.device.default_name=Moto G6 Plus
 # Display
 ro.hardware.vulkan=sdm660
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # FM
 ro.vendor.fm.use_audio_session=true
 
