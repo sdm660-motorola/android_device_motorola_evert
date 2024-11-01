@@ -10,7 +10,11 @@ $(call inherit-product, device/motorola/msm8998-common/common.mk)
 TARGET_MOTO_PLATFORM := sdm660
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FrameworksRes \
+    SettingsEvert \
+    SettingsProviderEvert \
+    SystemUIEvert
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
